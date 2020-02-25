@@ -1,16 +1,16 @@
 PODS:
-  - SwiftNetworking (1.0.0)
+  - HSwiftNetworking (1.0.0)
 
 DEPENDENCIES:
-  - SwiftNetworking (from `../`)
+  - HSwiftNetworking (from `../`)
 
 EXTERNAL SOURCES:
-  SwiftNetworking:
+  HSwiftNetworking:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftNetworking: 6fd1255268be58a9075a4508df81dcf79756134d
+  HSwiftNetworking: f6e29dd92166e74bb5d1cb689b4e3f4040d798f0
 
-PODFILE CHECKSUM: 9975da48ceee08a9fb5cd026233e1bfb88d7f0ce
+PODFILE CHECKSUM: 66ce639184eeaa8b749a7bab14cda8fe10571823
 
 COCOAPODS: 1.8.4

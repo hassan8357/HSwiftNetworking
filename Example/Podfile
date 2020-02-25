@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'SwiftNetworking_Example' do
-  pod 'SwiftNetworking', :path => '../'
+target 'HSwiftNetworking_Example' do
+  pod 'HSwiftNetworking', :path => '../'
 
-  target 'SwiftNetworking_Tests' do
+  target 'HSwiftNetworking_Tests' do
     inherit! :search_paths
 
     
