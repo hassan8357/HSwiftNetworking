@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftNetworking_Example' do
+  pod 'SwiftNetworking', :path => '../'
+
+  target 'SwiftNetworking_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
