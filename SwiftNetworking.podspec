@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SwiftNetworking'
+  s.name             = 'HSwiftNetworking'
   s.version          = '1.0.0'
   s.summary          = 'This lib contains swift networking handler with routers, result & codable.'
 

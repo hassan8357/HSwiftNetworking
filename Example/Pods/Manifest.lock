@@ -1,5 +1,5 @@
 PODS:
-  - SwiftNetworking (0.1.0)
+  - SwiftNetworking (1.0.0)
 
 DEPENDENCIES:
   - SwiftNetworking (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftNetworking: 31381ba3f2cde12f27dc31c8f895a93071bd7e84
+  SwiftNetworking: 6fd1255268be58a9075a4508df81dcf79756134d
 
 PODFILE CHECKSUM: 9975da48ceee08a9fb5cd026233e1bfb88d7f0ce
 
