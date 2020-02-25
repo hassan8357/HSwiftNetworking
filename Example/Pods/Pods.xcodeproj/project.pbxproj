@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07E42B8EFA8F957261EC8A9B0C821F96 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A3008D760FE9ABEB5F06BE4D56145 /* ReplaceMe.swift */; };
-		146751253034B964F5A9CAA68A5FC342 /* SwiftNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 391E984746AD0CA9DCAD5C50CE0FFCEB /* SwiftNetworking-dummy.m */; };
+		0BA20823A46AD7A77F9FEB78777702C3 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC4324DF945F8FB2B327FE3FECB827 /* Reachability.swift */; };
+		23C77D7F4821F260D1129576145A6B12 /* SwiftNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB95F71CB50907DB0F59A42A4A1DCB8D /* SwiftNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A158470CCC4CBD79E36DDFEA838601B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		4B7960D9B41850023E23693FF5DDC436 /* Pods-SwiftNetworking_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5D477F91CF790C6FFA450104C961A /* Pods-SwiftNetworking_Tests-dummy.m */; };
-		6865C2BD83B9EBB3605588BAB8E0C3FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		52D0C4236E05EAB2E6486581B512C63C /* URLSessionEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F42ACA1FD86FD3818EC8757BDB7C9 /* URLSessionEx.swift */; };
+		6E58410F57A03108AFE321E4DC55CA49 /* SwiftNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFC1FD78D76487546001585E68864CC /* SwiftNetworking-dummy.m */; };
 		6EF174433B7AD25A3A1815F698C7EEEC /* Pods-SwiftNetworking_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC07AB99BC9E2EB6549D09058ED5A7B /* Pods-SwiftNetworking_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C5D1AA4A02C0F90BC4F43DAA339893A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		83BA6985CCE8F89B3E045190C56F88A4 /* BaseAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACC01097146C1C81FD609B9CFEAAAC /* BaseAPIHandler.swift */; };
 		8BA6A49C77C7AEDEEB468C6113A707C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B14586A0B437FECD629D68B5428F0052 /* SwiftNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 231E0C814EB36E07F9D5CEB414D0F4B1 /* SwiftNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C12646C047B78D9125DFF1E717BB40D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CBBADC58D0471F5DFD78B643F2AF13 /* NetworkError.swift */; };
 		D01493F62B60D23C0782F860D8C793C3 /* Pods-SwiftNetworking_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7E3FF08E13C3E9ACB87F7DD3DA8F1 /* Pods-SwiftNetworking_Example-dummy.m */; };
 		EC4105D866F0BAE6541E97056A207B71 /* Pods-SwiftNetworking_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C1485A1AB8B0F3FEA1D96279399F91 /* Pods-SwiftNetworking_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA8A787391F6A7E5700EF3387A19AD04 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251F2746B89627EEF4F1DBE7A3A0FA5 /* BaseRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,31 +43,35 @@
 /* Begin PBXFileReference section */
 		00A4EEC32E6EA0E622D102B9613A1B0B /* Pods-SwiftNetworking_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftNetworking_Example.modulemap"; sourceTree = "<group>"; };
 		01FD2BC280AEB236F5FFDBBAB080D15A /* Pods-SwiftNetworking_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftNetworking_Example-frameworks.sh"; sourceTree = "<group>"; };
-		105CF59E470B54183209B0536B80D47B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		10CEA796E5E38A50E8F2479B71AEFCB0 /* SwiftNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftNetworking.framework; path = SwiftNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A65F9256B1E131D96A3A986E49C70F /* Pods-SwiftNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		231E0C814EB36E07F9D5CEB414D0F4B1 /* SwiftNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftNetworking-umbrella.h"; sourceTree = "<group>"; };
 		3073620B5AD524C4290459EFBB6016BE /* Pods-SwiftNetworking_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftNetworking_Tests.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		391E984746AD0CA9DCAD5C50CE0FFCEB /* SwiftNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftNetworking-dummy.m"; sourceTree = "<group>"; };
+		3D66E9EBFB4E3CD6B24A9B1531570ADF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		3DD5D477F91CF790C6FFA450104C961A /* Pods-SwiftNetworking_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftNetworking_Tests-dummy.m"; sourceTree = "<group>"; };
+		3E0F42ACA1FD86FD3818EC8757BDB7C9 /* URLSessionEx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = URLSessionEx.swift; sourceTree = "<group>"; };
 		3E1BE948C0BFBEA2C10B9E48210A4133 /* Pods-SwiftNetworking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftNetworking_Example.release.xcconfig"; sourceTree = "<group>"; };
-		415F0A3E3428C53CEB74755CB61A3689 /* SwiftNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftNetworking.xcconfig; sourceTree = "<group>"; };
+		4656142F7C1B344C64E928D3D5DF3C86 /* SwiftNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftNetworking-prefix.pch"; sourceTree = "<group>"; };
 		59E20AA5B4C4E1D207C19757DFA74D66 /* Pods-SwiftNetworking_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftNetworking_Example-Info.plist"; sourceTree = "<group>"; };
-		636A3008D760FE9ABEB5F06BE4D56145 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SwiftNetworking/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		63D5A13A87EEFDB654EB01877E881670 /* SwiftNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftNetworking.modulemap; sourceTree = "<group>"; };
+		69EF3282DFF908C2EDCCD6963E15ECD4 /* SwiftNetworking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SwiftNetworking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6A099886C4EDE0975228D394CB0F96AC /* SwiftNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftNetworking.xcconfig; sourceTree = "<group>"; };
 		6CE00D67490716E3F8DF3E4911FF5C3F /* Pods-SwiftNetworking_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftNetworking_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		73641888DF485B9AB941D04901F7DBFC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		76BF92928040B3AEA717D55E12954543 /* SwiftNetworking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SwiftNetworking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8B565F8A73FBAC4B2A086805F5403716 /* Pods-SwiftNetworking_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftNetworking_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9CACC01097146C1C81FD609B9CFEAAAC /* BaseAPIHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseAPIHandler.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5EB58CA92AF732BCC0F012FDA486CEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		AA4DA6A01DF40E1F6C15A2767E6DDE15 /* Pods-SwiftNetworking_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftNetworking_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B51DF4316E34419FA2420EB990D0265D /* SwiftNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftNetworking-Info.plist"; sourceTree = "<group>"; };
-		B5E167B180C3A56ACD84D0979FC0035D /* SwiftNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftNetworking-prefix.pch"; sourceTree = "<group>"; };
+		B9097D4B998469B938FAE2A3EFDEC574 /* SwiftNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftNetworking.modulemap; sourceTree = "<group>"; };
+		BB95F71CB50907DB0F59A42A4A1DCB8D /* SwiftNetworking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftNetworking-umbrella.h"; sourceTree = "<group>"; };
 		BC5F3E3D2D3879948B5D278A0C77A7B5 /* Pods_SwiftNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftNetworking_Tests.framework; path = "Pods-SwiftNetworking_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC68298C5A0A5D7C4309DAE9BB2CB49 /* Pods-SwiftNetworking_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftNetworking_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C9C1485A1AB8B0F3FEA1D96279399F91 /* Pods-SwiftNetworking_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftNetworking_Example-umbrella.h"; sourceTree = "<group>"; };
+		CAFC1FD78D76487546001585E68864CC /* SwiftNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftNetworking-dummy.m"; sourceTree = "<group>"; };
+		D1CBBADC58D0471F5DFD78B643F2AF13 /* NetworkError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D251F2746B89627EEF4F1DBE7A3A0FA5 /* BaseRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		D2DDB57845A0331948E2F3E6FE6302CC /* SwiftNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftNetworking-Info.plist"; sourceTree = "<group>"; };
 		D5BE519AE289B493A4738D02C313AB20 /* Pods_SwiftNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftNetworking_Example.framework; path = "Pods-SwiftNetworking_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7AC4324DF945F8FB2B327FE3FECB827 /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E1D7E3FF08E13C3E9ACB87F7DD3DA8F1 /* Pods-SwiftNetworking_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftNetworking_Example-dummy.m"; sourceTree = "<group>"; };
 		E48D3FC6B65F8A30D5D5A93AD54E5D60 /* Pods-SwiftNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E7F7038E0817DE34FAF09BBF50CCAA84 /* Pods-SwiftNetworking_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftNetworking_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -88,34 +96,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5390774053B5ADED82695611A28B731 /* Frameworks */ = {
+		9FAEC64FC1AA5A9FDB3F90D753CCE337 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6865C2BD83B9EBB3605588BAB8E0C3FC /* Foundation.framework in Frameworks */,
+				7C5D1AA4A02C0F90BC4F43DAA339893A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		326232CAB9D9DBFF5FCBA84527B1F958 /* SwiftNetworking */ = {
+		005A0F8581429C396417A9B213973B42 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				636A3008D760FE9ABEB5F06BE4D56145 /* ReplaceMe.swift */,
-				5696818AECCD7DCE3252DE942ABC4081 /* Pod */,
-				92E6D3411AC9CFA959D53C9BDD0C29EC /* Support Files */,
+				3E0F42ACA1FD86FD3818EC8757BDB7C9 /* URLSessionEx.swift */,
 			);
-			name = SwiftNetworking;
-			path = ../..;
+			name = Extensions;
+			path = SwiftNetworking/Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		3894F3B9C11EED0C8D7391D3C474784B /* Development Pods */ = {
+		34607C38AF5E8C2932E60E5C1AE0D6B5 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				326232CAB9D9DBFF5FCBA84527B1F958 /* SwiftNetworking */,
+				84836DC0DE27901BC6DC9C34F1292863 /* SwiftNetworking */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		37767748DB69F7E82148FB9C14FEBE26 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3D66E9EBFB4E3CD6B24A9B1531570ADF /* LICENSE */,
+				A5EB58CA92AF732BCC0F012FDA486CEA /* README.md */,
+				69EF3282DFF908C2EDCCD6963E15ECD4 /* SwiftNetworking.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		4366FC945338E06217137AC0C3B2E454 /* Pods-SwiftNetworking_Example */ = {
@@ -135,16 +151,6 @@
 			path = "Target Support Files/Pods-SwiftNetworking_Example";
 			sourceTree = "<group>";
 		};
-		5696818AECCD7DCE3252DE942ABC4081 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				73641888DF485B9AB941D04901F7DBFC /* LICENSE */,
-				105CF59E470B54183209B0536B80D47B /* README.md */,
-				76BF92928040B3AEA717D55E12954543 /* SwiftNetworking.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		5B809EE371EB9E4A8B58E7A36B513DC8 /* Pods-SwiftNetworking_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +167,20 @@
 			path = "Target Support Files/Pods-SwiftNetworking_Tests";
 			sourceTree = "<group>";
 		};
+		84836DC0DE27901BC6DC9C34F1292863 /* SwiftNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				005A0F8581429C396417A9B213973B42 /* Extensions */,
+				9F9DB81941CD102E86773C5809CC649D /* Managers */,
+				BA3BF5899B3D4526C961708795557E46 /* Models */,
+				37767748DB69F7E82148FB9C14FEBE26 /* Pod */,
+				9A48E0619C094B8D49C28E7E3DC4B7F6 /* Router */,
+				F1BC76E670AE942E8A052C3961D1C160 /* Support Files */,
+			);
+			name = SwiftNetworking;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		8B610CC2AD517C9EDB059B444827B721 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,18 +191,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		92E6D3411AC9CFA959D53C9BDD0C29EC /* Support Files */ = {
+		9A48E0619C094B8D49C28E7E3DC4B7F6 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				63D5A13A87EEFDB654EB01877E881670 /* SwiftNetworking.modulemap */,
-				415F0A3E3428C53CEB74755CB61A3689 /* SwiftNetworking.xcconfig */,
-				391E984746AD0CA9DCAD5C50CE0FFCEB /* SwiftNetworking-dummy.m */,
-				B51DF4316E34419FA2420EB990D0265D /* SwiftNetworking-Info.plist */,
-				B5E167B180C3A56ACD84D0979FC0035D /* SwiftNetworking-prefix.pch */,
-				231E0C814EB36E07F9D5CEB414D0F4B1 /* SwiftNetworking-umbrella.h */,
+				D251F2746B89627EEF4F1DBE7A3A0FA5 /* BaseRouter.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SwiftNetworking";
+			name = Router;
+			path = SwiftNetworking/Classes/Router;
+			sourceTree = "<group>";
+		};
+		9F9DB81941CD102E86773C5809CC649D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9CACC01097146C1C81FD609B9CFEAAAC /* BaseAPIHandler.swift */,
+			);
+			name = Managers;
+			path = SwiftNetworking/Classes/Managers;
 			sourceTree = "<group>";
 		};
 		B95A4EEC390857923C02D21A8F9B57B2 /* Targets Support Files */ = {
@@ -192,6 +216,16 @@
 				5B809EE371EB9E4A8B58E7A36B513DC8 /* Pods-SwiftNetworking_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BA3BF5899B3D4526C961708795557E46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1CBBADC58D0471F5DFD78B643F2AF13 /* NetworkError.swift */,
+				D7AC4324DF945F8FB2B327FE3FECB827 /* Reachability.swift */,
+			);
+			name = Models;
+			path = SwiftNetworking/Classes/Models;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -206,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				3894F3B9C11EED0C8D7391D3C474784B /* Development Pods */,
+				34607C38AF5E8C2932E60E5C1AE0D6B5 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				8B610CC2AD517C9EDB059B444827B721 /* Products */,
 				B95A4EEC390857923C02D21A8F9B57B2 /* Targets Support Files */,
@@ -219,6 +253,20 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1BC76E670AE942E8A052C3961D1C160 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9097D4B998469B938FAE2A3EFDEC574 /* SwiftNetworking.modulemap */,
+				6A099886C4EDE0975228D394CB0F96AC /* SwiftNetworking.xcconfig */,
+				CAFC1FD78D76487546001585E68864CC /* SwiftNetworking-dummy.m */,
+				D2DDB57845A0331948E2F3E6FE6302CC /* SwiftNetworking-Info.plist */,
+				4656142F7C1B344C64E928D3D5DF3C86 /* SwiftNetworking-prefix.pch */,
+				BB95F71CB50907DB0F59A42A4A1DCB8D /* SwiftNetworking-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftNetworking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +288,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAEDE87B8F0F131556A7920097B94036 /* Headers */ = {
+		D3D15399BC9EA16D9884E4449F7D0953 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B14586A0B437FECD629D68B5428F0052 /* SwiftNetworking-umbrella.h in Headers */,
+				23C77D7F4821F260D1129576145A6B12 /* SwiftNetworking-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,12 +320,12 @@
 		};
 		ED93F50D56EA8C4B924D3CEB852878E1 /* SwiftNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF1B0215D993D6165BD9310DCAB98931 /* Build configuration list for PBXNativeTarget "SwiftNetworking" */;
+			buildConfigurationList = D3E939C7E370697C81FCB7FEF3E799F9 /* Build configuration list for PBXNativeTarget "SwiftNetworking" */;
 			buildPhases = (
-				EAEDE87B8F0F131556A7920097B94036 /* Headers */,
-				728A3394C7082B66765FDA52701CF8A7 /* Sources */,
-				E5390774053B5ADED82695611A28B731 /* Frameworks */,
-				369D21784B0B921D8D97559D2EB992CE /* Resources */,
+				D3D15399BC9EA16D9884E4449F7D0953 /* Headers */,
+				DBA14ADCA23CCC0FA7D585A8DBF98BFC /* Sources */,
+				9FAEC64FC1AA5A9FDB3F90D753CCE337 /* Frameworks */,
+				1BB7B735BC66C1C15F5E44CC7825CC6D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -337,7 +385,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		369D21784B0B921D8D97559D2EB992CE /* Resources */ = {
+		1BB7B735BC66C1C15F5E44CC7825CC6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,12 +425,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		728A3394C7082B66765FDA52701CF8A7 /* Sources */ = {
+		DBA14ADCA23CCC0FA7D585A8DBF98BFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E42B8EFA8F957261EC8A9B0C821F96 /* ReplaceMe.swift in Sources */,
-				146751253034B964F5A9CAA68A5FC342 /* SwiftNetworking-dummy.m in Sources */,
+				83BA6985CCE8F89B3E045190C56F88A4 /* BaseAPIHandler.swift in Sources */,
+				FA8A787391F6A7E5700EF3387A19AD04 /* BaseRouter.swift in Sources */,
+				C12646C047B78D9125DFF1E717BB40D8 /* NetworkError.swift in Sources */,
+				0BA20823A46AD7A77F9FEB78777702C3 /* Reachability.swift in Sources */,
+				6E58410F57A03108AFE321E4DC55CA49 /* SwiftNetworking-dummy.m in Sources */,
+				52D0C4236E05EAB2E6486581B512C63C /* URLSessionEx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,11 +456,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		360AFE27723DC18364E8BF0A217F9D00 /* Debug */ = {
+		20C175A91E2CB5FB590FC801246FD4DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD21BCD8048F5294C499AD5095745371 /* Pods-SwiftNetworking_Example.debug.xcconfig */;
+			baseConfigurationReference = 6A099886C4EDE0975228D394CB0F96AC /* SwiftNetworking.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -418,28 +469,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftNetworking_Example/Pods-SwiftNetworking_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftNetworking/SwiftNetworking-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftNetworking/SwiftNetworking-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftNetworking_Example/Pods-SwiftNetworking_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftNetworking/SwiftNetworking.modulemap";
+				PRODUCT_MODULE_NAME = SwiftNetworking;
+				PRODUCT_NAME = SwiftNetworking;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		407B3EE89C1DD3571B3AB50CA9D3131B /* Release */ = {
+		354C00F1D8B88C4DB029A1EBC02CAE9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 415F0A3E3428C53CEB74755CB61A3689 /* SwiftNetworking.xcconfig */;
+			baseConfigurationReference = 6A099886C4EDE0975228D394CB0F96AC /* SwiftNetworking.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -469,10 +519,11 @@
 			};
 			name = Release;
 		};
-		ADF63A875DE5DB26CAC8F8A344582582 /* Debug */ = {
+		360AFE27723DC18364E8BF0A217F9D00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 415F0A3E3428C53CEB74755CB61A3689 /* SwiftNetworking.xcconfig */;
+			baseConfigurationReference = FD21BCD8048F5294C499AD5095745371 /* Pods-SwiftNetworking_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -482,18 +533,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftNetworking/SwiftNetworking-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftNetworking/SwiftNetworking-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftNetworking_Example/Pods-SwiftNetworking_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftNetworking/SwiftNetworking.modulemap";
-				PRODUCT_MODULE_NAME = SwiftNetworking;
-				PRODUCT_NAME = SwiftNetworking;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftNetworking_Example/Pods-SwiftNetworking_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -755,11 +807,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF1B0215D993D6165BD9310DCAB98931 /* Build configuration list for PBXNativeTarget "SwiftNetworking" */ = {
+		D3E939C7E370697C81FCB7FEF3E799F9 /* Build configuration list for PBXNativeTarget "SwiftNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADF63A875DE5DB26CAC8F8A344582582 /* Debug */,
-				407B3EE89C1DD3571B3AB50CA9D3131B /* Release */,
+				20C175A91E2CB5FB590FC801246FD4DE /* Debug */,
+				354C00F1D8B88C4DB029A1EBC02CAE9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

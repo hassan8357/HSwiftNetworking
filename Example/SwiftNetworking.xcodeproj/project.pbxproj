@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA141B2240567ED00761168 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA141B1240567ED00761168 /* APIManager.swift */; };
+		5CA141B52405683F00761168 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA141B42405683F00761168 /* PostModel.swift */; };
+		5CA141B7240568D600761168 /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA141B6240568D600761168 /* NetworkingConstants.swift */; };
+		5CA141B92405695200761168 /* NetworkingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA141B82405695200761168 /* NetworkingEnums.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -31,8 +35,12 @@
 		0854BA1AEDAD35C2EEFC301F /* Pods-SwiftNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNetworking_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftNetworking_Tests/Pods-SwiftNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1181FDFC5865D7D450111813 /* Pods_SwiftNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftNetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A2417E35816170346478B7F /* Pods-SwiftNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNetworking_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftNetworking_Tests/Pods-SwiftNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		53BC4CBFDF3545A3ABF2BC33 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		53C1BE4D83BE3567E7945B2A /* SwiftNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftNetworking.podspec; path = ../SwiftNetworking.podspec; sourceTree = "<group>"; };
+		53BC4CBFDF3545A3ABF2BC33 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		53C1BE4D83BE3567E7945B2A /* SwiftNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftNetworking.podspec; path = ../SwiftNetworking.podspec; sourceTree = "<group>"; };
+		5CA141B1240567ED00761168 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		5CA141B42405683F00761168 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		5CA141B6240568D600761168 /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
+		5CA141B82405695200761168 /* NetworkingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEnums.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftNetworking_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNetworking_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +52,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		77CFD033F82D713D6B8B77FC /* Pods_SwiftNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A6CD83C9B0AA27B317459BA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7A6CD83C9B0AA27B317459BA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D2070E0C68EAEE7026076831 /* Pods-SwiftNetworking_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNetworking_Example.release.xcconfig"; path = "Target Support Files/Pods-SwiftNetworking_Example/Pods-SwiftNetworking_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E30806758C06836160BCCAB2 /* Pods-SwiftNetworking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftNetworking_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftNetworking_Example/Pods-SwiftNetworking_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +85,6 @@
 				1A2417E35816170346478B7F /* Pods-SwiftNetworking_Tests.debug.xcconfig */,
 				0854BA1AEDAD35C2EEFC301F /* Pods-SwiftNetworking_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +95,40 @@
 				77CFD033F82D713D6B8B77FC /* Pods_SwiftNetworking_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CA141AD24055F9800761168 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5CA141B024055FC300761168 /* API Manager */,
+				5CA141B6240568D600761168 /* NetworkingConstants.swift */,
+				5CA141B82405695200761168 /* NetworkingEnums.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		5CA141AE24055FA000761168 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+			);
+			name = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		5CA141B024055FC300761168 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5CA141B1240567ED00761168 /* APIManager.swift */,
+			);
+			name = "API Manager";
+			sourceTree = "<group>";
+		};
+		5CA141B32405683000761168 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5CA141B42405683F00761168 /* PostModel.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -114,8 +155,10 @@
 		607FACD21AFB9204008FA782 /* Example for SwiftNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				5CA141B32405683000761168 /* Entities */,
+				5CA141AE24055FA000761168 /* Presentation Layer */,
+				5CA141AD24055F9800761168 /* Domain */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -227,6 +270,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -331,7 +375,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA141B2240567ED00761168 /* APIManager.swift in Sources */,
+				5CA141B7240568D600761168 /* NetworkingConstants.swift in Sources */,
+				5CA141B52405683F00761168 /* PostModel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5CA141B92405695200761168 /* NetworkingEnums.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
