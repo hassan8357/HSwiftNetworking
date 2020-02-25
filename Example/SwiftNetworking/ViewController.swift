@@ -28,8 +28,7 @@ class ViewController: UIViewController {
     func getPosts() {
         startLoading()
         APIManager().getAllPosts { [unowned self] (result) in
-            self.stopLoading()
-            
+            DispatchQueue.main.async { self.stopLoading() }
             switch result {
             case .success(let posts):
                 self.posts = posts
