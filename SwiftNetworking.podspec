@@ -18,14 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+  This lib contains swift networking handler with routers, result & codable.
 TODO: Add Comments and write read.me to discribe how it works.
                        DESC
 
-  s.homepage         = 'https://github.com/hassan8357/SwiftNetworking'
+  s.homepage         = 'https://github.com/hassan8357/HSwiftNetworking'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hassan Refaat' => 'hassan.8357@gmail.com' }
-  s.source           = { :git => 'https://github.com/hassan8357/SwiftNetworking.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/hassan8357/HSwiftNetworking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
