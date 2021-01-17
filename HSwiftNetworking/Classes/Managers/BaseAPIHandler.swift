@@ -39,11 +39,11 @@ open class BaseAPIHandler : NSObject {
     public func performNetworkRequest(forRouter router: BaseRouter, then handler: @escaping (Result<Any, NetworkError>) -> Void) {
         performRequest(forRouter: router) { (result) in
             switch result {
-            case .success(let response, let data):
+            case .success((let response, let data)):
                 if let statusCode = (response as? HTTPURLResponse)?.statusCode {
                     //Handle HTTP errors here
                     guard 200..<299 ~= statusCode else {
-                        handler(.failure(NetworkError(type: .invalidResponse, statusCode: statusCode, response: response)))
+                        handler(.failure(NetworkError(type: .invalidResponse, statusCode: statusCode, data: data)))
                         return
                     }
                     do {
@@ -79,11 +79,11 @@ open class BaseAPIHandler : NSObject {
     public func performNetworkRequest<T: Decodable>(forRouter router: BaseRouter, jsonDecoder: JSONDecoder, then handler: @escaping (Result<T, NetworkError>) -> Void) {
         performRequest(forRouter: router) { (result) in
             switch result {
-            case .success(let response, let data):
+            case .success((let response, let data)):
                 if let statusCode = (response as? HTTPURLResponse)?.statusCode {
                     //Handle HTTP errors here
                     guard 200..<299 ~= statusCode else {
-                        handler(.failure(NetworkError(type: .invalidResponse, statusCode: statusCode, response: response)))
+                        handler(.failure(NetworkError(type: .invalidResponse, statusCode: statusCode, data: data)))
                         return
                     }
                     do {

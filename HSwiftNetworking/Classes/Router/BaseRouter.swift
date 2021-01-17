@@ -10,6 +10,7 @@ import Foundation
 
 public typealias JSONDictionary = [String: AnyObject]
 public typealias ImageTuple = (imageName: String, imageData: Data)
+public typealias FileTuple = (fileName: String, fileMimeType: String, fileData: Data)
 
 /// HTTP method definitions.
 ///
@@ -26,6 +27,13 @@ public enum HTTPMethod: String {
     case connect = "CONNECT"
 }
 
+public enum MimeType: String {
+    case pdf    = "application/pdf"
+    case jpg    = "image/jpeg"
+    case png    = "image/png"
+    case text   = "text/plain"
+}
+
 open class BaseRouter {
     
     let path: String
@@ -38,7 +46,7 @@ open class BaseRouter {
 
     let method: HTTPMethod
 
-    let requestHeaders: [String : Any]
+    var requestHeaders: [String : Any]
 
     let baseURLString : String
     
@@ -46,7 +54,9 @@ open class BaseRouter {
     
     let images: [ImageTuple]
     
-    let boundary: String
+    var files: [FileTuple]? = nil
+    
+    public let boundary: String
 
     public init(method: HTTPMethod,
                 path: String,
@@ -65,22 +75,58 @@ open class BaseRouter {
         self.bodyArrayParameters = bodyArrayParameters
         self.isMultiPart = isMultiPart
         self.images = images
+        self.requestHeaders = [:]
         boundary = UUID().uuidString
-        
-        var headers = requestHeaders ?? [:]
-        
-        
+        self.resetRequestHeaders()
+        if let headers = requestHeaders {
+            self.updateRequestHeaders(requestHeaders: headers)
+        }
+    }
+    
+    public init(method: HTTPMethod,
+                path: String,
+                requestHeaders: [String: Any]? = nil,
+                queryParameters: JSONDictionary? = nil,
+                bodyParameters: JSONDictionary? = nil,
+                bodyArrayParameters: [AnyObject]? = nil,
+                baseURLString: String,
+                isMultiPart: Bool = false,
+                images: [ImageTuple] = [],
+                files: [FileTuple] = []) {
+        self.method = method
+        self.baseURLString = baseURLString
+        self.path = path
+        self.queryParameters = queryParameters
+        self.bodyParameters = bodyParameters
+        self.bodyArrayParameters = bodyArrayParameters
+        self.isMultiPart = isMultiPart
+        self.images = images
+        self.files = files
+        self.requestHeaders = [:]
+        boundary = UUID().uuidString
+        self.resetRequestHeaders()
+        if let headers = requestHeaders {
+            self.updateRequestHeaders(requestHeaders: headers)
+        }
+    }
+    
+    //MARK:- Request Headers Handle
+    public func updateRequestHeaders(requestHeaders: [String : Any]) {
+        requestHeaders.forEach { (arg0) in
+            let (key, value) = arg0
+            self.requestHeaders.updateValue(value, forKey: key)
+        }
+    }
+    
+    public func resetRequestHeaders() {
+        var contentType = "application/json"
         if isMultiPart {
-            headers["Content-Type"] = "multipart/form-data; boundary=\(boundary)"
-//            self.requestHeaders = ["Content-Type" : "multipart/form-data; boundary=\(boundary)"]
+            contentType = "multipart/form-data; boundary=\(boundary)"
         }
-        else {
-            headers["Content-Type"] = "application/json"
-//            self.requestHeaders = ["Content-Type" : "application/json"]
-        }
-        self.requestHeaders = headers
+        self.requestHeaders = ["Content-Type" : contentType]
     }
 
+    //MARK:- URLRequest
     /// Returns a URL request or throws if an `Error` was encountered.
     ///
     /// - throws: An `Error` if the underlying `URLRequest` is `nil`.
@@ -157,6 +203,16 @@ open class BaseRouter {
             data.append("Content-Disposition: form-data; name=\"\(image.imageName)\"; filename=\"\(image.imageName)\"\r\n".data(using: .utf8)!)
             data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
             data.append(image.imageData)
+        }
+        
+        if let files = files {
+            for file in files {
+                // Add the fie data to the raw http request data
+                data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+                data.append("Content-Disposition: form-data; name=\"Files\"; filename=\"\(file.fileName)\"\r\n".data(using: .utf8)!)
+                data.append("Content-Type: \(file.fileMimeType)\r\n\r\n".data(using: .utf8)!)
+                data.append(file.fileData)
+            }
         }
 
         // End the raw http request data, note that there is 2 extra dash ("-") at the end, this is to indicate the end of the data

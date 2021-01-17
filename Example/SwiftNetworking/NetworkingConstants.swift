@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftNetworking
+import HSwiftNetworking
 
 let BaseURL = "https://jsonplaceholder.typicode.com/"
 

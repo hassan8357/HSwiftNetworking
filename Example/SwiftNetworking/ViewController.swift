@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftNetworking
+import HSwiftNetworking
 
 class ViewController: UIViewController {
 

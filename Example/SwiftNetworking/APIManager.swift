@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwiftNetworking
+import HSwiftNetworking
 
 class APIManager: BaseAPIHandler {
     
