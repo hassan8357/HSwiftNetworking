@@ -8,6 +8,19 @@
 
 import Foundation
 
+let CONTENT_TYPE_KEY = "Content-Type"
+
+public enum ContentType: String {
+    case json = "application/json"
+    case urlEncoded = "application/x-www-form-urlencoded"
+    case multipart = "multipart/form-data; boundary="
+    case none
+    
+    static subscript(n: String) -> ContentType {
+        return ContentType(rawValue: n) ?? .none
+    }
+}
+
 public typealias JSONDictionary = [String: AnyObject]
 public typealias ImageTuple = (imageName: String, imageData: Data)
 public typealias FileTuple = (fileName: String, fileMimeType: String, fileData: Data)
@@ -49,39 +62,16 @@ open class BaseRouter {
     var requestHeaders: [String : Any]
 
     let baseURLString : String
-    
-    let isMultiPart: Bool
-    
+        
     let images: [ImageTuple]
     
     var files: [FileTuple]? = nil
     
+    var contentType: ContentType
+    
+    let isMultiPart: Bool
+    
     public let boundary: String
-
-    public init(method: HTTPMethod,
-                path: String,
-                requestHeaders: [String: Any]? = nil,
-                queryParameters: JSONDictionary? = nil,
-                bodyParameters: JSONDictionary? = nil,
-                bodyArrayParameters: [AnyObject]? = nil,
-                baseURLString: String,
-                isMultiPart: Bool = false,
-                images: [ImageTuple] = []) {
-        self.method = method
-        self.baseURLString = baseURLString
-        self.path = path
-        self.queryParameters = queryParameters
-        self.bodyParameters = bodyParameters
-        self.bodyArrayParameters = bodyArrayParameters
-        self.isMultiPart = isMultiPart
-        self.images = images
-        self.requestHeaders = [:]
-        boundary = UUID().uuidString
-        self.resetRequestHeaders()
-        if let headers = requestHeaders {
-            self.updateRequestHeaders(requestHeaders: headers)
-        }
-    }
     
     public init(method: HTTPMethod,
                 path: String,
@@ -90,7 +80,7 @@ open class BaseRouter {
                 bodyParameters: JSONDictionary? = nil,
                 bodyArrayParameters: [AnyObject]? = nil,
                 baseURLString: String,
-                isMultiPart: Bool = false,
+                contentType: ContentType = .none,
                 images: [ImageTuple] = [],
                 files: [FileTuple] = []) {
         self.method = method
@@ -99,15 +89,16 @@ open class BaseRouter {
         self.queryParameters = queryParameters
         self.bodyParameters = bodyParameters
         self.bodyArrayParameters = bodyArrayParameters
-        self.isMultiPart = isMultiPart
+        self.contentType = contentType
         self.images = images
         self.files = files
         self.requestHeaders = [:]
+        self.isMultiPart = contentType == .multipart
         boundary = UUID().uuidString
-        self.resetRequestHeaders()
         if let headers = requestHeaders {
             self.updateRequestHeaders(requestHeaders: headers)
         }
+        self.setupContentTypeHeader()
     }
     
     //MARK:- Request Headers Handle
@@ -116,14 +107,15 @@ open class BaseRouter {
             let (key, value) = arg0
             self.requestHeaders.updateValue(value, forKey: key)
         }
+        setupContentTypeHeader()
     }
     
-    public func resetRequestHeaders() {
-        var contentType = "application/json"
-        if isMultiPart {
-            contentType = "multipart/form-data; boundary=\(boundary)"
+    private func setupContentTypeHeader() {
+        var contentTypeStr = contentType.rawValue
+        if contentType == .multipart {
+            contentTypeStr += boundary
         }
-        self.requestHeaders = ["Content-Type" : contentType]
+        requestHeaders.updateValue(contentTypeStr, forKey: CONTENT_TYPE_KEY)
     }
 
     //MARK:- URLRequest
@@ -167,14 +159,29 @@ open class BaseRouter {
         //Adjust HTTP Method
         urlRequest.httpMethod = method.rawValue
 
-        //Adjust Body JSON Dictionary
-        if let bodyParameters = bodyParameters {
-            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyParameters)
-        }
+        //Adjust Body
+        if let contentTypeValue = requestHeaders[CONTENT_TYPE_KEY] as? String {
+            switch ContentType[contentTypeValue] {
+            case .json:
+                //Adjust Body JSON Dictionary
+                if let bodyParameters = bodyParameters {
+                    urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyParameters)
+                }
 
-        //Adjust Body JSON Array
-        if let bodyArrayParameters = bodyArrayParameters {
-            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyArrayParameters)
+                //Adjust Body JSON Array
+                if let bodyArrayParameters = bodyArrayParameters {
+                    urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyArrayParameters)
+                }
+                
+            case .urlEncoded:
+                //Adjust www-form-urlencoded body
+                if let bodyParameters = bodyParameters {
+                    urlRequest.encodeParameters(parameters: bodyParameters)
+                }
+                
+            default:
+                print("")
+            }
         }
 
         //Adjust Request Headers
