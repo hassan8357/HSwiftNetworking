@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HSwiftNetworking'
-  s.version          = '2.1.0'
+  s.version          = '2.1.1'
   s.summary          = 'This lib contains swift networking handler with routers, result & codable.'
 
 # This description is used to generate tags and improve search results.
@@ -33,12 +33,4 @@ TODO: Add Comments and write read.me to discribe how it works.
   s.swift_version = '5.0'
 
   s.source_files = 'HSwiftNetworking/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'HSwiftNetworking' => ['HSwiftNetworking/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

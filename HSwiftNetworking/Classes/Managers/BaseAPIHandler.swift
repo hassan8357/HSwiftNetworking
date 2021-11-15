@@ -93,10 +93,10 @@ open class BaseAPIHandler : NSObject {
                         handler(.success(values))
                     } catch {
                         //decode catch error
+                        print("decodeError: \(error)")
                         handler(.failure(NetworkError(type: .decodeError)))
                     }
-                }
-                else {
+                } else {
                     //Can't get status code
                     handler(.failure(NetworkError(type: .invalidResponse)))
                 }
