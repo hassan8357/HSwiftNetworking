@@ -36,7 +36,7 @@ open class BaseAPIHandler : NSObject {
     }
     
     /// This method perform network request and complete with JSON in success case
-    public func performNetworkRequest(forRouter router: BaseRouter, then handler: @escaping (Result<Any, NetworkError>) -> Void) {
+    open func performNetworkRequest(forRouter router: BaseRouter, then handler: @escaping (Result<Any, NetworkError>) -> Void) {
         performRequest(forRouter: router) { (result) in
             switch result {
             case .success((let response, let data)):
@@ -76,7 +76,7 @@ open class BaseAPIHandler : NSObject {
     }
     
     /// This method perform network request and complete with Decodable Type in success case
-    public func performNetworkRequest<T: Decodable>(forRouter router: BaseRouter, jsonDecoder: JSONDecoder, then handler: @escaping (Result<T, NetworkError>) -> Void) {
+    open func performNetworkRequest<T: Decodable>(forRouter router: BaseRouter, jsonDecoder: JSONDecoder, then handler: @escaping (Result<T, NetworkError>) -> Void) {
         performRequest(forRouter: router) { (result) in
             switch result {
             case .success((let response, let data)):
