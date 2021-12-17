@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HSwiftNetworking'
-  s.version          = '2.1.2'
+  s.version          = '2.1.3'
   s.summary          = 'This lib contains swift networking handler with routers, result & codable.'
 
 # This description is used to generate tags and improve search results.

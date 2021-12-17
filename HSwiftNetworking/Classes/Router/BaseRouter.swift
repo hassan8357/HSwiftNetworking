@@ -22,8 +22,8 @@ public enum ContentType: String {
 }
 
 public typealias JSONDictionary = [String: AnyObject]
-public typealias ImageTuple = (imageName: String, imageData: Data)
-public typealias FileTuple = (fileName: String, fileMimeType: String, fileData: Data)
+public typealias ImageTuple = (imageName: String, imageData: Data, imageKey: String)
+public typealias FileTuple = (fileName: String, fileMimeType: String, fileData: Data, fileKey: String)
 
 /// HTTP method definitions.
 ///
@@ -207,7 +207,7 @@ open class BaseRouter {
         for image in images {
             // Add the image data to the raw http request data
             data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-            data.append("Content-Disposition: form-data; name=\"\(image.imageName)\"; filename=\"\(image.imageName)\"\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"\(image.imageKey)\"; filename=\"\(image.imageName)\"\r\n".data(using: .utf8)!)
             data.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
             data.append(image.imageData)
         }
@@ -216,7 +216,7 @@ open class BaseRouter {
             for file in files {
                 // Add the fie data to the raw http request data
                 data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-                data.append("Content-Disposition: form-data; name=\"Files\"; filename=\"\(file.fileName)\"\r\n".data(using: .utf8)!)
+                data.append("Content-Disposition: form-data; name=\"\(file.fileKey)\"; filename=\"\(file.fileName)\"\r\n".data(using: .utf8)!)
                 data.append("Content-Type: \(file.fileMimeType)\r\n\r\n".data(using: .utf8)!)
                 data.append(file.fileData)
             }
